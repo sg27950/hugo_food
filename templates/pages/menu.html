@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} | Menu {% endblock %} 
+{% block content %}
+
+<!-- Main -->
+<section id="main">
+  <div class="container">
+    <div id="content">
+      <!-- Post -->
+      <article class="box post">
+        <header>
+          <h2>
+            Explore our <strong>menu</strong> with<br />
+            no moderation!
+          </h2>
+        </header>
+        <span class="image featured"><img src={% static 'img/menu.jpg' %} /></span>
+        {% if categories %}
+          {% for cat in categories %}
+              
+        <h2>{{ cat.title }}</h2>
+        <section id="features">
+          <div class="container">
+            <div class="row aln-center">
+              
+                <!-- {% for menu in cat.categoryMenu %} -->
+             
+              <div class="col-4 col-6-medium col-12-small">
+                <!-- Feature -->
+                <section>
+                  <a href="#" class="image featured"
+                    ><img src="images/satai.jpg" alt=""
+                  /></a>
+                  <header>
+                    <h3>{{ cat.categoryMenu }}</h3>
+                  </header>
+                  <p>
+                    {{ cat.menu.description }}
+                  </p>
+                </section>
+              </div>
+              <!-- {% endfor %} -->
+              
+             
+              
+              
+            </div>
+          </div>
+        </section>
+        
+        {% endfor %}
+        {% endif %}
+      
+      </article>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
