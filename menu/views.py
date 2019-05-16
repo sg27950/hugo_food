@@ -5,7 +5,13 @@ from .models import Menu, Category
 
 
 def index(request):
-    categories = Category.objects.all()
+    categories = Category.objects.order_by('position').filter(is_published=True)
+
+    
+    
+    
+    
+
     # menus = Menu.objects.order_by('category').filter(is_published=True)
     # categoryMenu = Category.objects.all()
     
@@ -14,7 +20,7 @@ def index(request):
     context = {
         # 'menus': menus,
         'categories': categories,
-        # 'categoryMenu' : categoryMenu,
+        
         
     }
     

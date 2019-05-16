@@ -1,60 +1,43 @@
 {% extends 'base.html' %} 
-{% load static %}
+{% load staticfiles %}
 {% block title %} | Menu {% endblock %} 
 {% block content %}
 
-<!-- Main -->
-<section id="main">
-  <div class="container">
-    <div id="content">
-      <!-- Post -->
-      <article class="box post">
-        <header>
-          <h2>
-            Explore our <strong>menu</strong> with<br />
-            no moderation!
-          </h2>
-        </header>
-        <span class="image featured"><img src={% static 'img/menu.jpg' %} /></span>
-        {% if categories %}
-          {% for cat in categories %}
-              
-        <h2>{{ cat.title }}</h2>
-        <section id="features">
-          <div class="container">
-            <div class="row aln-center">
-              
-                <!-- {% for menu in cat.categoryMenu %} -->
-             
-              <div class="col-4 col-6-medium col-12-small">
-                <!-- Feature -->
-                <section>
-                  <a href="#" class="image featured"
-                    ><img src="images/satai.jpg" alt=""
-                  /></a>
-                  <header>
-                    <h3>{{ cat.categoryMenu }}</h3>
-                  </header>
-                  <p>
-                    {{ cat.menu.description }}
-                  </p>
-                </section>
+
+
+<section class="menu-header">
+    <div class="header-banner">
+      <h1 class="main-heading">Menu</h1>
+      <h3 class="sub-heading">Explore the best of our cuisine</h3>
+    </div>
+  </section>
+  <!-- End of About Us -->
+
+  <!-- Gallery -->
+      {% if categories %}
+      {% for cat in categories %}
+      <section class="gallery">
+          
+        <h1 class="menu-heading-text">{{ cat.title }}</h1>
+        
+          <div class="cards-wrapper">
+              {% for menu in cat.menu.all %}
+            <div class="card">
+              <div class="card-overlay">
+                <h1 class="card-overlay-heading">{{ menu.title }}</h1>
+                <p class="card-overlay-paragraph">$ {{ menu.price }}</p>
+                <button type="button" class="card-overlay-btn">Order</button>
               </div>
-              <!-- {% endfor %} -->
-              
-             
-              
+              <img src="{{ menu.photo.url }}" alt="" class="card-img" />
               
             </div>
-          </div>
-        </section>
+          
+            {% endfor %}
+         
+          
+        </div>
         
-        {% endfor %}
-        {% endif %}
-      
-      </article>
-    </div>
-  </div>
-</section>
-
+      </section>
+    {% endfor %}
+  {% endif %}
 {% endblock %}

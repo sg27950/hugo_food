@@ -14,7 +14,7 @@ class MenuAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'is_published')
+    list_display = ('id', 'title', 'is_published', 'position')
     list_display_links = ('id', 'title')
     search_fields = ('title', )
     list_per_page = 25

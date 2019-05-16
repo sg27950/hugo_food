@@ -1,0 +1,60 @@
+/* Color Theme Swatches in RGBA */
+$color1: rgba(216, 181, 4, 1);
+$color2: rgba(242, 159, 4, 1);
+$color3: rgba(216, 121, 4, 1);
+$color4: rgba(191, 3, 3, 1);
+$color5: rgba(114, 2, 2, 1);
+$color-white: white;
+$color-black: black;
+
+// Fonts
+$font-primary: "itc-avant-garde-gothic-pro", normal;
+
+// Font-weigth
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+@mixin flexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyles($transform: uppercase) {
+  letter-spacing: 2px;
+  font-weight: $light;
+  text-transform: $transform;
+}
+
+@mixin textStyles2($transform: uppercase) {
+  letter-spacing: 2px;
+  font-weight: $semibold;
+  text-transform: $transform;
+}
+@mixin textStyles3($transform: uppercase) {
+  letter-spacing: 2px;
+  font-weight: $bold;
+  text-transform: $transform;
+}
+@mixin centering($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%fullSpace {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color5;
+}

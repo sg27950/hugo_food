@@ -1,165 +1,69 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load staticfiles %}
 {% block content %}
 
+<!-- Header -->
+<header class="header">
+  <div class="brand">
+    <a href="#" class="logo"><i class="fas fa-ustensiles"></i></a>
+    <div>
+      <img src="{% static 'img/logo-01.png' %}" alt="logo" class="logo-image" />
+    </div>
+  </div>
+  <div class="header-banner">
+    <h1 class="main-heading">Welcome</h1>
+    <h3 class="sub-heading">Thai Cuisine in it's best</h3>
+    
+  </div>
+</header>
 <!-- Features -->
-<section id="features">
-  <div class="container">
-    <header>
-      <h2>Gentlemen, behold! This is our<strong> Specialties</strong>!</h2>
-    </header>
-    <div class="row aln-center">
-      <div class="col-4 col-6-medium col-12-small">
-        <!-- Feature -->
-        <section>
-          <a href="#" class="image featured"
-            ><img src={% static 'img/thaifood1.jpg' %} alt=""
-          /></a>
-          <header>
-            <h3>SEAFOOD</h3>
-          </header>
-          <p>
-            This is <strong>Tom Yum</strong>, Shrimp based food with spices and
-            the secret ingridients by Chef Hugo
-          </p>
-        </section>
-      </div>
-      <div class="col-4 col-6-medium col-12-small">
-        <!-- Feature -->
-        <section>
-          <a href="#" class="image featured"
-            ><img src="images/thaifood2.jpg" alt=""
-          /></a>
-          <header>
-            <h3>Noodles selection</h3>
-          </header>
-          <p>
-            We have 30 different noodle dishes. Vegan an gluten free options
-            available.
-          </p>
-        </section>
-      </div>
-      <div class="col-4 col-6-medium col-12-small">
-        <!-- Feature -->
-        <section>
-          <a href="#" class="image featured"
-            ><img src="images/thaifood3.jpg" alt=""
-          /></a>
-          <header>
-            <h3>The chef's special of the</h3>
-          </header>
-          <p>
-            Every month a new special dish so you never
-            <strong>get bored</strong>.
-          </p>
-        </section>
-      </div>
-      <div class="col-12">
-        <ul class="actions">
-          <li><a href="{% url 'menu' %}" class="button icon fa-file">Explore Our Menu</a></li>
-        </ul>
-      </div>
+
+<section class="about-us">
+    <div class="about-us-left">
+      <img src="{% static 'img/about-us.png' %}" alt="" />
     </div>
-  </div>
-</section>
 
-<!-- Banner -->
-<section id="banner">
-  <div class="container">
-    <p>
-      Cuisine is an <strong>ART</strong>.<br />
-      Come appreciatte fine art here.
-    </p>
-  </div>
-</section>
-
-<!-- Main -->
-<section id="main">
-  <div class="container">
-    <div class="row">
-      <!-- Content -->
-      <div id="content" class="col-8 col-12-medium">
-        <!-- Post -->
-        <article class="box post">
-          <header>
-            <h2>
-              <a href="#"
-                >If you live too far <strong>you should move</strong> ...<br />
-                See our locations.</a
-              >
-            </h2>
-          </header>
-          <a href="#" class="image featured"
-            ><img src={% static 'img/thairest.jpg' %} alt=""
-          /></a>
-          <h3>Large Group?</h3>
-          <p>
-            We cater in our locaitions or in your place. But first we need to
-            prepare our staff for your demand, send us a message and we can
-            provide you with estimates and more informations about our Cater
-            Service.
-          </p>
-          <ul class="actions">
-            <li><a href="#" class="button icon fa-file">Request a Quote</a></li>
-          </ul>
-        </article>
+    <div class="about-us-right">
+      <h1 class="main-heading">About Us</h1>
+      <h3 class="sub-heading">Introduce the Thai Dishes</h3>
+      <div class="stars">
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
       </div>
-
-      <!-- Sidebar -->
-      <div id="sidebar" class="col-4 col-12-medium">
-        <!-- Excerpts -->
-        <section>
-          <ul class="divided">
-            <li>
-              <!-- Excerpt -->
-              <article class="box excerpt">
-                <header>
-                  <span class="date">MALIBU</span>
-                  <h3><a href="#">Where celebrities eat.</a></h3>
-                </header>
-                <p>
-                  Jennifer Aniston, Tom Hanks, and Steven Spielberg live in this
-                  beach resort area, which takes advantage of the warm
-                  California weather, but allows them to hide from the paparazzi
-                  a little more. But the main reason is to be closer to our unit
-                  in Malibu
-                </p>
-              </article>
-            </li>
-            <li>
-              <!-- Excerpt -->
-              <article class="box excerpt">
-                <header>
-                  <span class="date">SANTA MONICA</span>
-                  <h3><a href="#">Sunset and the pier.</a></h3>
-                </header>
-                <p>
-                  Look for wooden walkways on the beach to help haul gear. Find
-                  them just south of the Pier at Crescent Bay Park, at Bay
-                  Street and Arcadia Terrace. Walkways also extend adjacent to
-                  the Pier, and to our beautiful unit.
-                </p>
-              </article>
-            </li>
-            <li>
-              <!-- Excerpt -->
-              <article class="box excerpt">
-                <header>
-                  <span class="date">NEWPORT BEACH</span>
-                  <h3><a href="#">We are at the OC</a></h3>
-                </header>
-                <p>
-                  Where the city meets the Pacific Ocean, the Balboa Peninsula
-                  reaches out like a skinny finger from the mainland. It creates
-                  a natural harbor dotted with seven small, and our OC unit
-                </p>
-              </article>
-            </li>
-          </ul>
-        </section>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+        dolor illo quia debitis deleniti asperiores officiis, beatae autem
+        error et, reprehenderit veniam laborum in ad ex blanditiis.
+        Aspernatur, fugit! Blanditiis quo dolore suscipit earum aspernatur
+        recusandae officiis ducimus veritatis vero, consequatur dolorum
+        consequuntur expedita deleniti ab exercitationem autem, beatae fugiat?
+      </p>
+      <div class="stars">
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
       </div>
+      <a href="{% url 'about' %}" type="button" class="secondary-btn">Read More</a>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- End of About Us -->
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="cards-wrapper">
+      {% for menu in featured_menu %}
+      <div class="card">
+        <div class="card-overlay">
+          <h1 class="card-overlay-heading">{{ menu.title }}</h1>
+          <p class="card-overlay-paragraph">$ {{ menu.price }}</p>
+          <a href="{% url 'menu' %}" type="button" class="card-overlay-btn">Explore Menu</a>
+        </div>
+        <img src="{{ menu.photo.url }}" alt="" class="card-img" />
+      </div>
+      {% endfor %}
+      
+    </div>
+  </section>
 
 {% endblock %}

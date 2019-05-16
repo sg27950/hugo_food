@@ -1,110 +1,41 @@
 {% extends 'base.html' %} 
-{% load static %}
+{% load staticfiles %}
 {% block content %}
-
-<!-- Main -->
-<section id="main">
-  <div class="container">
-    <div id="content">
-      <!-- Post -->
-      <article class="box post">
-        <header>
-          
-        </header>
-        <span class="image featured"><img src={% static 'img/thai.jpg' %} alt=""/></span>
-        <h3>And yeah, that's basically it</h3>
-        <p>
-          In Thailand, food forms a central part of any social occasions—and
-          vice versa. That is, food often becomes the social occasion in itself
-          or reason to celebrate. This is partly due to the friendly, social
-          nature of Thai people, but also because of the way in which food is
-          ordered and eaten in Thailand. After the meal is over, there is no
-          such thing as dispensing with leftovers. Throwing food away enrages
-          the Thai “god of rice”, a female deity who watches over the people,
-          ensuring everyone has enough to eat. Bad luck or even widespread
-          famine may then ensue. A typical Thai meal includes four main
-          seasonings: salty, sweet, sour, and spicy. Indeed, most Thai dishes
-          are not considered satisfying unless they combine all four tastes.
-          When eating out, a group of Thai diners would order a variety of meat
-          and/or fish dishes, plus vegetables, a noodle dish, and possibly soup.
-          Dessert may consist simply of fresh fruit, such as pineapple, or
-          something more exotic, such as colorful rice cakes, depending on the
-          region.
-        </p>
-        <p>
-          Aside from meals, Thais are renowned “snackers”. It is easy to pick up
-          a quick but delicious snack for mere pennies along the roadside or at
-          marketplaces in Thailand. Popular snacks consist of spring rolls,
-          chicken or beef satay, raw vegetables with a spicy dip, soups, salads,
-          and sweets. The formal presentation of food is another important
-          aspect of Thai culture. Developed primarily in the palace to please
-          the King of Siam, Thai food presentation is among the most exquisite
-          in the world. Serving platters are decorated with all variety of
-          carved vegetables and fruits into flowers and other pieces of beauty.
-          Palace-style stir-fries include elegantly carved vegetables within the
-          dish itself. For such artwork, Thai chefs use a simple paring knife
-          and ice water.
-        </p>
-        <p>
-          Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-          ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-          sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu
-          malesuada in, tristique at erat lorem ipsum dolor sit amet lorem ipsum
-          sed consequat consequat magna tempus lorem ipsum consequat Phasellus
-          laoreet massa id in, tristique at erat lorem ipsum dolor sit amet
-          lorem ipsum sed consequat magna tempus veroeros lorem sed tempus
-          aliquam lorem ipsum veroeros consequat magna tempus lorem ipsum
-          consequat Phasellus laoreet massa id justo mattis pharetra. Fusce
-          suscipit ligula vel quam viverra sit amet mollis tortor congue. Sed
-          quis mauris sit amet magna accumsan tristique. Curabitur leo nibh,
-          rutrum eu malesuada in tristique
-        </p>
-        <h3>Accumsan lorem ipsum veroeros</h3>
-        <p>
-          Consequat Phasellus laoreet massa id in, tristique at erat lorem ipsum
-          dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-          consequat magna tempus lorem ipsum consequat Phasellus laoreet massa
-          id justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit
-          amet mollis tortor congue. Sed quis mauris sit amet magna.
-        </p>
-        <p>
-          Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-          ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-          sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu
-          malesuada in, tristique at erat lorem ipsum dolor sit amet lorem ipsum
-          sed consequat consequat magna tempus lorem ipsum consequat Phasellus
-          laoreet massa id in, tristique at erat lorem ipsum dolor sit amet
-          lorem ipsum sed consequat magna tempus veroeros lorem sed tempus
-          aliquam lorem ipsum veroeros consequat magna tempus lorem ipsum
-          consequat Phasellus laoreet massa id justo mattis pharetra. Fusce
-          suscipit ligula vel quam viverra sit amet mollis tortor congue. Sed
-          quis mauris sit amet magna accumsan tristique. Curabitur leo nibh,
-          rutrum eu malesuada in tristique
-        </p>
-        <h3>Ligula suspcipit fusce veroeros</h3>
-        <p>
-          Nullam dolore etiam sed massa id in, tristique at erat lorem ipsum
-          dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-          consequat magna tempus lorem ipsum consequat Phasellus laoreet massa
-          id justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit
-          amet mollis tortor congue. Sed quis mauris sit amet magna.
-        </p>
-        <p>
-          Sed massa id justo mattis pharetra. Fusce suscipit ligula vel quam
-          viverra sit amet mollis tortor congue. Sed quis mauris sit amet magna
-          accumsan tristique. Curabitur leo nibh, rutrum eu malesuada in,
-          tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-          consequat magna tempus lorem ipsum consequat Phasellus laoreet massa
-          id in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed
-          consequat magna tempus veroeros lorem sed tempus aliquam lorem ipsum
-          veroeros consequat magna tempus lorem ipsum consequat Phasellus
-          laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam
-          viverra sit amet mollis tortor congue. Sed quis mauris sit amet magna
-          accumsan.
-        </p>
-      </article>
+ <!-- Header -->
+ <section class="about-header">
+    <div class="header-banner">
+      <h1 class="main-heading">A little bit about us</h1>
+      <h3 class="sub-heading">Once upon a time, in Thailand...</h3>
     </div>
-  </div>
-</section>
+  </section>
 
+<section class="about-us">
+    <div class="about-us-left">
+      <img src="{% static 'img/ancient.jpg' %}" alt="" />
+    </div>
+
+    <div class="about-us-right">
+      <h1 class="main-heading">Chef Somying</h1>
+      <h3 class="sub-heading">The mastermind behind this menu</h3>
+      <div class="stars">
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
+      </div>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+        dolor illo quia debitis deleniti asperiores officiis, beatae autem
+        error et, reprehenderit veniam laborum in ad ex blanditiis.
+        Aspernatur, fugit! Blanditiis quo dolore suscipit earum aspernatur
+        recusandae officiis ducimus veritatis vero, consequatur dolorum
+        consequuntur expedita deleniti ab exercitationem autem, beatae fugiat?
+      </p>
+      <div class="stars">
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
+        <i class="fas fa-star-of-life star">*</i>
+      </div>
+      <!-- <button type="button" class="secundary-btn">Read More</button> -->
+    </div>
+  </section>
 {% endblock %}

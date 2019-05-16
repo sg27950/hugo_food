@@ -1,0 +1,135 @@
+.hamburguer-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 300;
+  .menu {
+    @extend %fullSpace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    &-line {
+      width: 100%;
+      height: 4px;
+      background-color: $color2;
+      transform-origin: right;
+      transition: all 0.5s 0.5s;
+    }
+  }
+}
+
+.main-heading {
+  font-family: $font-primary;
+  font-size: 50px;
+  @include textStyles;
+  color: $color-white;
+  margin-bottom: 40px;
+}
+.sub-heading {
+  font-family: $font-primary;
+  font-size: 20px;
+  @include textStyles;
+  color: $color-white;
+  margin-bottom: 80px;
+}
+.main-btn {
+  widows: 170px;
+  height: 45px;
+  font-family: $font-primary;
+  font-size: 14px;
+  @include textStyles;
+  letter-spacing: 3px;
+  color: $color1;
+  background-color: transparent;
+  border: 1px solid $color1;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $color5;
+    color: $color-white;
+  }
+}
+
+.secundary-btn {
+  widows: 170px;
+  height: 45px;
+  font-family: $font-primary;
+  font-size: 14px;
+  @include textStyles;
+  letter-spacing: 3px;
+  color: $color2;
+  background-color: transparent;
+  border: 1px solid $color2;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $color2;
+    color: $color5;
+  }
+}
+.card {
+  width: 33.333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+
+  &:hover .card-overlay {
+    left: 0;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    @extend %fullSpace;
+    @include flexLayout;
+    flex-direction: column;
+    background-color: rgba($color2, 0.6);
+    color: $color-white;
+    z-index: 10;
+    transition: left 0.7s;
+
+    &-heading {
+      font-family: $font-primary;
+      font-size: 50px;
+      @include textStyles2(capitalize);
+    }
+    &-paragraph {
+      font-family: $font-primary;
+      font-size: 20px;
+      @include textStyles(capitalize);
+      margin-bottom: 30px;
+    }
+    &-btn {
+      width: 150 px;
+      height: 40px;
+      color: $color1;
+      background-color: $color5;
+      font-family: $font-primary;
+      font-size: 14px;
+      @include textStyles3(capitalize);
+      letter-spacing: 1px;
+      border: 1px solid $color5;
+      border-radius: 30px;
+      outline: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+  &-img {
+    @extend %fullSpace;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
